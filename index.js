@@ -20,6 +20,8 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
+    res.redirect(301, '/chart-tilt');
+    /*
     var options = {
         root: __dirname + '/static/',
         dotfiles: 'deny',
@@ -34,6 +36,7 @@ app.post('/', function(req, res) {
             res.status(err.status).end();
         }
     });
+    */
 });
 
 app.get('/temperature', function(req, res) {
