@@ -1,6 +1,6 @@
 var app = angular.module('Index', ["chart.js"]);
 
-app.controller('IndexCtrl', function ($scope, $http, $timeout) {
+app.controller('IndexCtrl', function ($scope, $http, $interval) {
     $scope.tilt = null;
 
     $scope.options = {
@@ -45,5 +45,9 @@ app.controller('IndexCtrl', function ($scope, $http, $timeout) {
             }
         });
     };
+    $interval(ping, 1000);
+    function ping() {
+        ws.send("ping");
+    }
 
 });

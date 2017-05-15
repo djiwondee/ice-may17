@@ -53,6 +53,7 @@ console.log("websocket server created");
 
 wss.on("connection", function(ws) {
     ws.on("message", function(data) {
+        if(data === "ping") return;
         // Broadcast to everyone else.
         wss.clients.forEach(function each(client) {
             if (client !== ws && client.readyState === WebSocket.OPEN) {
