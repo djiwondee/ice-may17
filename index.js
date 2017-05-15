@@ -17,7 +17,7 @@ var sf_user = process.env.SF_USER;
 var sf_pass = process.env.SF_PASS;
 var sf_clientId = process.env.SF_CLIENTID;
 var sf_clientSecret = process.env.SF_CLIENTSECRET;
-
+var sf_securityToken = process.env.SF_SECURITYTOKEN;
 app.get('/', function(req, res) {
     res.redirect(301, '/chart-tilt');
 });
@@ -49,13 +49,10 @@ app.post('/flic-button', function(req, res) {
 });
 
 if(sf_user != "CHANGE ME" && sf_pass != "CHANGE ME" && sf_clientId != "CHANGE ME" && sf_clientSecret != "CHANGE ME") {
-    console.log(sf_user);
-    console.log(sf_pass);
-    console.log(sf_clientId);
-    console.log(sf_clientSecret);
     org = nforce.createConnection({
         clientId: sf_clientId,
         clientSecret: sf_clientSecret,
+        securityToken: sf_securityToken,
         redirectUri: '',
         mode: 'single',
         plugins: []
@@ -67,7 +64,6 @@ if(sf_user != "CHANGE ME" && sf_pass != "CHANGE ME" && sf_clientId != "CHANGE ME
     .catch(function(err){
         console.log("Error authenicating against Salesforce Org");
         console.log(err);
-        
     });
 }
 

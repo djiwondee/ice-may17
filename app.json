@@ -14,11 +14,15 @@
             "value": "CHANGE ME"
         },
         "SF_CLIENTID": {
-            "description": "Client ID of your Connected App",
+            "description": "Client ID/Consumer Key of your Connected App",
             "value": "CHANGE ME"
         },
         "SF_CLIENTSECRET": {
             "description": "Client Secret of your Connected App",
+            "value": "CHANGE ME"
+        },
+        "SF_SECURITYTOKEN": {
+            "description": "Security Token for your Salesforce User",
             "value": "CHANGE ME"
         },
         "CASE_ASSETID": {
