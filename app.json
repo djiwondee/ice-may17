@@ -3,5 +3,28 @@
     "description": "IoT Cloud Elite Day -- Heroku App",
     "repository": "https://github.com/mieckert/ice-may17",
     "logo": "https://c1.sfdcstatic.com/content/dam/web/en_is/www/images/logo/salesforce-cloud-logo-sm.png",
-    "keywords": ["node", "heroku", "salesforce", "iot"]
+    "keywords": ["node", "heroku", "salesforce", "iot"],
+    "env": {
+        "SF_USER": {
+            "description": "Username of your Salesforce User",
+            "value": "CHANGE ME"
+        },
+        "SF_PASS": {
+            "description": "Password of your Salesforce User",
+            "value": "CHANGE ME"
+        },
+        "CASE_ASSETID": {
+            "description": "Configuration of Case created through flic button",
+            "value": null
+        },
+        "CASE_SUBJECT": {
+            "description": "Configuration of Case created through flic button",
+            "value": "Machine reporting service error 125"
+        },
+        "CASE_SUPPLIEDEMAIL": {
+            "description": "Configuration of Case created through flic button",
+            "value": "lboyle@uog.com"
+        },
+
+    }
 }
