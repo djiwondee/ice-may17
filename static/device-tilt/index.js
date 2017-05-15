@@ -1,7 +1,7 @@
 var app = angular.module('Index', []);
 
 app.controller('IndexCtrl', function ($scope, $http, $interval) {
-    var host = location.origin.replace(/^https?/, 'ws');
+    var host = location.origin.replace(/^http/, 'ws');
     var ws = new WebSocket(host);
 
     ws.onopen = function() {

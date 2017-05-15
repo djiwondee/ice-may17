@@ -29,7 +29,7 @@ app.controller('IndexCtrl', function ($scope, $http, $timeout) {
     $scope.data = [ $scope.values ];
     $scope.series = ["Tilt"];
 
-    var host = location.origin.replace(/^https?/, 'ws');
+    var host = location.origin.replace(/^http/, 'ws');
     var ws = new WebSocket(host);
     ws.onmessage = function (event) {
         $scope.$apply(function(){
