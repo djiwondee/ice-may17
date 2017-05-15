@@ -34,7 +34,9 @@ app.post('/flic-button', function(req, res) {
     }
 
     var c = nforce.createSObject('Case');
-    //c.set('AssetId', process.env.CASE_ASSETID);
+    if(process.env.CASE_ASSETID != "CHANGE ME") {
+        c.set('AssetId', process.env.CASE_ASSETID);
+    }    
     c.set('Subject', process.env.CASE_SUBJECT);
     c.set('SuppliedEmail', process.env.CASE_SUPPLIEDEMAIL);
 
