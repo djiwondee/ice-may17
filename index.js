@@ -67,6 +67,7 @@ if(sf_user != "CHANGE ME" && sf_pass != "CHANGE ME" && sf_clientId != "CHANGE ME
     .catch(function(err){
         console.log("Error authenicating against Salesforce Org");
         console.log(err);
+        
     });
 }
 
