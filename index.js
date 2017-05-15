@@ -5,6 +5,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var nforce = require('nforce');
+var WebSocket = require("ws");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -41,15 +42,45 @@ app.get('/temperature', function(req, res) {
         "buttonPressed": false
     });
 });
-var temperature = 21;
-setInterval(newTemp, 1000);
-function newTemp() {
-        var delta = Math.random() * 10 - 5;
-        if(temperature + delta > 30 || temperature + delta < 0) {
+
+
+
+var server = http.createServer(app);
+server.listen(port);
+
+var wss = new WebSocket.Server({server: server});
+console.log("websocket server created");
+
+wss.on("connection", function(ws) {
+    ws.on("message", function(data) {
+        // Broadcast to everyone else.
+        wss.clients.forEach(function each(client) {
+            if (client !== ws && client.readyState === WebSocket.OPEN) {
+                client.send(data);
+            }
+        });
+    });
+
+    /*
+    var tilt = 0;
+    var id = setInterval(newTilt, 1000);
+    function newTilt() {
+        var delta = Math.random() * 60 - 30;
+        if(tilt + delta > 180 || tilt + delta < -180) {
             delta = -delta;
         }
-        temperature = temperature + delta;
-};
+        tilt = tilt + delta;
+        var data = {
+            timestamp: Date.now(),
+            tilt: tilt
+        };
+        ws.send(JSON.stringify(data));
+    };
+    console.log("websocket connection open");
+    */
 
-
-http.createServer(app).listen(port);
+    ws.on("close", function() {
+        console.log("websocket connection close");
+        //clearInterval(id);
+    });
+});
