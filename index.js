@@ -48,8 +48,8 @@ app.post('/flic-button', function(req, res) {
 
 if(sf_user != "CHANGE ME" && sf_pass != "CHANGE ME") {
     org = nforce.createConnection({
-        clientId: '3MVG9HxRZv05HarRXTda.1RkrphmmT6POMnpBcXWt1.nGo2SFu4kKSRKdMgm2JiLWb71uU8Q3QJDVH6SNlh.C',
-        clientSecret: '1697918172555568564',
+        clientId: '3MVG9rFJvQRVOvk5nd6A4swCyck.4BFLnjFuASqNZmmxzpQSFWSTe6lWQxtF3L5soyVLfjV3yBKkjcePAsPzi',
+        clientSecret: '9154137956044345875',
         redirectUri: '',
         mode: 'single',
         plugins: []
