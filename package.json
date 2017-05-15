@@ -1,0 +1,16 @@
+{
+  "name": "ice-may17",
+  "version": "1.0.0",
+  "description": "IoT Cloud Elite Day -- Heroku App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "nforce": "^1.7.0"
+  }
+}

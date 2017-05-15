@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/slds/assets/styles/salesforce-lightning-design-system.css">
+    <script type="text/javascript" src="https://winter17pre-dev-ed.my.salesforce.com/canvas/sdk/js/38.0/canvas-all.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/chart.js/Dist/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="index.js"></script>
+
+</head>
+<body ng-app="Index" ng-controller="IndexCtrl">
+    <article class="slds-card slds-col slds-size--1-of-1">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                        <use xlink:href="/slds/assets/icons/utility-sprite/svg/symbols.svg#socialshare"></use>
+                    </svg>
+                </div>
+                <div class="slds-media__body slds-truncate">
+                    <h2>
+                        <a href="javascript:void(0);" class="slds-text-link--reset">
+                            <span class="slds-text-heading--small">Temperatur</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-text-align--center">
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <tbody>
+                    <tr>
+                        <td>absolute</td>
+                        <td>{{absolute}}</td>
+                    </tr>
+                    <tr>
+                        <td>alpha</td>
+                        <td>{{alpha}}</td>
+                    </tr>
+                    <tr>
+                        <td>beta</td>
+                        <td>{{beta}}</td>
+                    </tr>
+                    <tr>
+                        <td>gamma</td>
+                        <td>{{gamma}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="slds-card__footer">&nbsp;</div>
+    </article>
+</body>
+</html>

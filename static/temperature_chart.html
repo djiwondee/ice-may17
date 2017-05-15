@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/slds/assets/styles/salesforce-lightning-design-system.css">
+    <script type="text/javascript" src="https://winter17pre-dev-ed.my.salesforce.com/canvas/sdk/js/38.0/canvas-all.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/chart.js/Dist/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="temperature_chart.js"></script>
+
+</head>
+<body ng-app="Index" ng-controller="IndexCtrl">
+<!--
+    <div class="slds-tabs--default">
+        <ul class="slds-tabs--default__nav" role="tablist">
+            <li class="slds-tabs--default__item slds-text-title--caps slds-active" title="Temperatur" role="presentation">
+                <a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">
+                    Temperatur
+                </a>
+            </li>
+        </ul>
+        <div id="tab-default-1" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+            <div class="slds-text-align--center slds-text-heading--large" id="mydiv">0</div>
+        </div>
+    </div>
+-->
+
+    <article class="slds-card slds-col slds-size--1-of-1">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                        <use xlink:href="/slds/assets/icons/utility-sprite/svg/symbols.svg#socialshare"></use>
+                    </svg>
+                </div>
+                <div class="slds-media__body slds-truncate">
+                    <h2>
+                        <a href="javascript:void(0);" class="slds-text-link--reset">
+                            <span class="slds-text-heading--small">Temperatur</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+
+            <div class="slds-no-flex">
+                <div class="slds-text-align--center slds-text-heading--large" ng-class="{'slds-text-color--error': buttonPressed}">{{temperature | number:2}}°C</div>
+
+                <!-- <button class="slds-button slds-button--neutral">New</button> -->
+            </div>
+
+        </div>
+        <div class="slds-card__body slds-text-align--center">
+            <!--<div class="slds-text-align--center slds-text-heading--large">{{temperature}}°C</div>-->
+            <canvas class="chart chart-line" chart-data="data" chart-labels="labels"
+                chart-series="series" chart-options="options" height="450px" style="display: block; height: 450px"></canvas>
+        </div>
+        <div class="slds-card__footer">&nbsp;</div>
+    </article>
+</body>
+</html>
