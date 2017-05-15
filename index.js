@@ -16,7 +16,7 @@ var sf_user = process.env.SF_USER;
 var sf_pass = process.env.SF_PASS;
 
 app.get('/', function(req, res) {
-    res.sendfile('index.html', {root: './static'});
+    res.redirect(301, '/chart-tilt');    
 });
 
 app.post('/', function(req, res) {
