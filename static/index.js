@@ -1,4 +1,4 @@
-var app = angular.module('Index', ["chart.js"]);
+var app = angular.module('Index', []);
 
 app.controller('IndexCtrl', function ($scope, $http, $timeout) {
 
