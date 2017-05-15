@@ -13,6 +13,14 @@
             "description": "Password of your Salesforce User",
             "value": "CHANGE ME"
         },
+        "SF_CLIENTID": {
+            "description": "Client ID of your Connected App",
+            "value": "CHANGE ME"
+        },
+        "SF_CLIENTSECRET": {
+            "description": "Client Secret of your Connected App",
+            "value": "CHANGE ME"
+        },
         "CASE_ASSETID": {
             "description": "Configuration of Case created through flic button",
             "value": null

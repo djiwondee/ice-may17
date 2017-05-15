@@ -15,6 +15,8 @@ app.use(express.static('static'));
 var port = process.env.PORT || 8888;
 var sf_user = process.env.SF_USER;
 var sf_pass = process.env.SF_PASS;
+var sf_clientId = process.env.SF_CLIENTID;
+var sf_clientSecret = process.env.SF_CLIENTSECRET;
 
 app.get('/', function(req, res) {
     res.redirect(301, '/chart-tilt');
@@ -46,7 +48,7 @@ app.post('/flic-button', function(req, res) {
     });
 });
 
-if(sf_user != "CHANGE ME" && sf_pass != "CHANGE ME") {
+if(sf_user != "CHANGE ME" && sf_pass != "CHANGE ME" && sf_clientId != "CHANGE ME" && sf_clientSecret != "CHANGE ME") {
     org = nforce.createConnection({
         clientId: '3MVG9rFJvQRVOvk5nd6A4swCyck.4BFLnjFuASqNZmmxzpQSFWSTe6lWQxtF3L5soyVLfjV3yBKkjcePAsPzi',
         clientSecret: '9154137956044345875',
