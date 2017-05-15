@@ -22,21 +22,18 @@
                 <div class="slds-media__body slds-truncate">
                     <h2>
                         <a href="javascript:void(0);" class="slds-text-link--reset">
-                            <span class="slds-text-heading--small">Temperatur</span>
+                            <span class="slds-text-heading--small">Device Tilt</span>
                         </a>
                     </h2>
                 </div>
             </header>
         </div>
         <div class="slds-card__body slds-text-align--center">
-            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
-                <tbody>
-                    <tr>
-                        <td>beta</td>
-                        <td class="slds-text-align--right">{{beta}}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="slds-text-align--center slds-text-heading--large">{{beta}}</div>
+            <div width="100%">
+                <br />
+                <input style="width: 90%" type="range" id="myRange" min="-180" max="180" ng-model="beta">
+            </div>
         </div>
         <div class="slds-card__footer">&nbsp;</div>
     </article>
