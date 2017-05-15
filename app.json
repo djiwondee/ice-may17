@@ -1,0 +1,7 @@
+{
+    "name": "ice-may17",
+    "description": "IoT Cloud Elite Day -- Heroku App",
+    "repository": "https://github.com/mieckert/ice-may17",
+    "logo": "https://c1.sfdcstatic.com/content/dam/web/en_is/www/images/logo/salesforce-cloud-logo-sm.png",
+    "keywords": ["node", "heroku", "salesforce", "iot"]
+}
