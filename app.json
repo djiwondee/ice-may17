@@ -27,7 +27,7 @@
         },
         "CASE_ASSETID": {
             "description": "Configuration of Case created through flic button",
-            "value": null
+            "value": "CHANGE ME"
         },
         "CASE_SUBJECT": {
             "description": "Configuration of Case created through flic button",
