@@ -13,4 +13,4 @@ integration with Salesforce to create a case using a [flic button](https://flic.
 
 ## Source
 
-This is a fork intended to update coding to make it work again on latest iOS release
+This is a fork from  [mieckert/ice-may17](https://github.com/mieckert/ice-may17), intended to update coding to make it work again on latest iOS release.
