@@ -1,4 +1,4 @@
-# Heroku Source Code for IoT Cloud Elite Day in May 2017
+# Heroku App for simulation IoT events sing motion detection on a smart phone
 
 ## Deploy to Heroku
 
